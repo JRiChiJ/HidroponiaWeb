@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../assets/img/icon.png">
+    <link rel="icon" href="../assets/img/ico.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Hidroponia Principal</title>
 
@@ -13,7 +15,6 @@
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-<link href="../assets/css/contactos.css" rel="stylesheet">
   </head>
 
   <body>
@@ -29,16 +30,7 @@
               <a class="nav-link" href="dashboard.php">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Que vendemos?</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="camas.php">Camas</a>
-                <a class="dropdown-item" href="#">Semillas</a>
-                <a class="dropdown-item" href="#">Utencilios</a>
-                <a class="dropdown-item" href="#">Manuales</a>
-              </div>
+              <a class="nav-link" href="#">Productos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contactanos.php">Contactanos</a>
@@ -52,11 +44,53 @@
       </nav>
 
       <main role="main" class="inner cover">
-            <h1 class="cover-heading">Cover your page.</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-            <p class="lead">
-              <a href="https://trello.com/b/ujKrcTzi/hidroponia" class="btn btn-lg btn-secondary">Trello</a>
-            </p>
+        <body>
+
+<form action="/action_page.php" class="w3-container w3-card-4 w3-light-grey w3-text-green w3-margin">
+<h2 class="w3-center">Contact Us</h2>
+
+<div class="w3-row w3-section">
+<div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+<div class="w3-rest">
+  <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
+</div>
+</div>
+
+<div class="w3-row w3-section">
+<div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+<div class="w3-rest">
+  <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
+</div>
+</div>
+
+<div class="w3-row w3-section">
+<div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+<div class="w3-rest">
+  <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+</div>
+</div>
+
+<div class="w3-row w3-section">
+<div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+<div class="w3-rest">
+  <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone">
+</div>
+</div>
+
+<div class="w3-row w3-section">
+<div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+<div class="w3-rest">
+  <input class="w3-input w3-border" name="message" type="text" placeholder="Message">
+</div>
+</div>
+
+<button class="w3-button w3-block w3-section w3-green w3-ripple w3-padding">Send</button>
+
+</form>
+
+</body>
+</html>
+
           </main>
     <!-- Bootstrap core JavaScript
     ================================================== -->

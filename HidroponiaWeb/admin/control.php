@@ -6,7 +6,7 @@
     $login=$_POST["inputEmail"];
     $pass=md5($_POST["inputPassword"]);
     $link=Conectarse();
-    $ssql="Select id_usuario, login, password from usuario where login='".$login ."' and password='".$pass."'";
+    $ssql="Select id, login, password from usuario where login='".$login ."' and password='".$pass."'";
     $resultado = mysqli_query($link,$ssql) or die ("No se pudo ejecutar la consulta.<br> MySQL dijo -> ". mysqli_error()." - ".mysqli_error());
     $userfound=mysqli_num_rows($resultado);
     $row=mysqli_fetch_array($resultado);

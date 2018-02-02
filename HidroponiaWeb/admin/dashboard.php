@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../assets/img/icon.png">
+    <link rel="icon" href="../assets/img/ico.png">
 
     <title>Hidroponia Principal</title>
 
@@ -30,16 +30,7 @@
             <a class="nav-link" href="dashboard.php">Home<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Que vendemos?</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="camas.php">Camas</a>
-              <a class="dropdown-item" href="#">Semillas</a>
-              <a class="dropdown-item" href="#">Utencilios</a>
-              <a class="dropdown-item" href="#">Manuales</a>
-            </div>
+            <a class="nav-link" href="index.php">Productos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contactanos.php">Contactanos</a>
@@ -59,7 +50,7 @@
         <div class="container">
           <h1 class="display-3">Bienvenidos al mundo de la hidroponia</h1>
           <p>Sistemas de control para camas Hidroponicas</p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">Quieres saber mas &raquo;</a></p>
+          <p><a class="btn btn-primary btn-lg" href="infbasica.php" role="button">Quieres saber mas &raquo;</a></p>
         </div>
       </div>
 
@@ -72,13 +63,13 @@
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
           <div class="col-md-4">
-            <h2>Semillas</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <h2>Cultivo</h2>
+            <p>El cultivo hidropónico no es otra cosa que el cultivo sin tierra. Sirve para cualquier planta, especialmente para las ornamentales, porque permite conservar durante más tiempo las flores y se puede practicar a pequeña escala.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
           <div class="col-md-4">
-            <h2>Plantas</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <h2>Características</h2>
+            <p>Las plantas absorben los minerales esenciales por medio de iones inorgánicos disueltos en el agua. En condiciones naturales, el suelo actúa como reserva de nutrientes minerales, pero el suelo en sí no es esencial para que la planta crezca. Cuando los nutrientes minerales de la tierra se disuelven en agua, las raíces de la planta son capaces de absorberlos.</p>
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
         </div>

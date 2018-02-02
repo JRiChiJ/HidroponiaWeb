@@ -13,7 +13,7 @@ function Conectarse(){
         die("Error al intentar conectarse con el servidor MySQL. ".mysqli_error()) ;
         exit();
     }
-    $db_select = mysqli_select_db($con,"usuarioprueba");
+    $db_select = mysqli_select_db($con,"hidroweb(prueba)");
     if (!$db_select){
         die("No se pudo conectar con la Base de datos. ".mysqli_error()) ;
         exit();
