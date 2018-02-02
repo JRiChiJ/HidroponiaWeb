@@ -13,6 +13,6 @@ Cree una nueva base de datos y luego en su gestor de base de datas ejemplo(phpmy
 
 **Sugerencias**
 
-Este codigo esta echo en php7 haci que si utiliza versiones anteriores del php debera fijarse en la sintaxis de anteriores versiones de php.
+Este codigo esta hecho en php7 por lo tanto que si utiliza versiones anteriores del php deberá fijarse en la sintaxis de anteriores versiones de php.
 Verifique bien el archivo conf que esta dentro de la carpte config ya que ahi se le debe colocar el nombre a la base de datos que se le quiera conectar, si tiene localhost , root y contraseña(el xammpp no viene por defecto sin contraseña) deje el campo vacio si tiene xampp, ejemplo: 
 @mysqli_connect("localhos o ip","root","contraseña");
