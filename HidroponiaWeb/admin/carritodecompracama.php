@@ -73,7 +73,7 @@
 <body>
 	<header>
 		<img src="./imagenes/hidrologo.jpg" id="logo">
-		<a href="./carritodecompras.php" title="ver carrito de compras">
+		<a href="./carritodecompracama.php" title="ver carrito de compras">
 			<img src="./imagenes/carrito.png">
 		</a>
 	</header>
@@ -87,7 +87,7 @@
 			for($i=0;$i<count($datos);$i++){
 
 	?>
-				<div class="producto">
+				<div class="productos">
 					<center>
 						<img src="./productos/<?php echo $datos[$i]['Imagen'];?>"><br>
 						<span ><?php echo $datos[$i]['Nombre'];?></span><br>

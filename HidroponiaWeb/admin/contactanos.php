@@ -1,3 +1,9 @@
+<?php
+    include("../config/conf.php");
+    $link = Conectarse();
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -45,47 +51,74 @@
       <main role="main" class="inner cover">
         <body>
 
-<form action="/action_page.php" class="w3-container w3-card-4 w3-light-grey w3-text-green w3-margin">
-<h2 class="w3-center">Contact Us</h2>
+                                  <form name="form1" class="w3-container w3-card-4 w3-light-grey w3-text-green w3-margin" action="" method="post">
 
-<div class="w3-row w3-section">
-<div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
-<div class="w3-rest">
-  <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
-</div>
-</div>
+                                    <div class="w3-row w3-section">
+                                        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+                                          <div class="w3-rest">
+                                              <label for="Nombre" class="sr-only">Nombre</label>
+                                              <input type="text" name="nombre" id="Nombre" class="form-control" placeholder="Nombre" required autofocus>
+                                          </div>
+                                  </div>
+                                  <div class="w3-row w3-section">
+                                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+                                        <div class="w3-rest">
+                                      <label for="Apellido" class="sr-only">Apellido</label>
+                                      <input type="text" name="apellido" id="inputDesc" class="form-control" placeholder="Apellido" required autofocus>
+                                        </div>
+                                  </div>
+                                  <div class="w3-row w3-section">
+                                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+                                    <div class="w3-rest">
+                                      <label for="login" class="sr-only">Login</label>
+                                      <input type="text" name="email" id="inputDesc" class="form-control" placeholder="Email" required autofocus>
+                                    </div>
+                                </div>
+                                <div class="w3-row w3-section">
+                                  <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+                                  <div class="w3-rest">
+                                      <label for="password" class="sr-only">Password</label>
+                                      <input type="text" name="telefono" id="inputDesc" class="form-control" placeholder="Telefono" required autofocus>
+                                    </div>
+                                    </div>
+                                    <div class="w3-row w3-section">
+                                      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+                                      <div class="w3-rest">
+                                      <label for="pregunta" class="sr-only">Pregunta</label>
+                                        <input type="text" name="mensaje" id="inputDesc" class="form-control" placeholder="Mensaje" required autofocus>
+                                    </div>
+                                  </div>
+                                      <br>
 
-<div class="w3-row w3-section">
-<div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
-<div class="w3-rest">
-  <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
-</div>
-</div>
+                                      <button name="Enviar" class="w3-button w3-block w3-section w3-green w3-ripple w3-padding" type="submit">Enviar</button>
+                                  </form>
 
-<div class="w3-row w3-section">
-<div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
-<div class="w3-rest">
-  <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
-</div>
-</div>
 
-<div class="w3-row w3-section">
-<div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
-<div class="w3-rest">
-  <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone">
-</div>
-</div>
+                          <br>
+                          <br>
+                          <?php
+                          if (isset($_POST['Enviar'])) {
 
-<div class="w3-row w3-section">
-<div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
-<div class="w3-rest">
-  <input class="w3-input w3-border" name="message" type="text" placeholder="Message">
-</div>
-</div>
+                              $Nombre = $_POST['nombre'];
+                              $Apellido = $_POST['apellido'];
+                              $Email = $_POST['email'];
+                              $Telefono = $_POST['telefono'];
+                              $Mensaje = $_POST['mensaje'];
 
-<button class="w3-button w3-block w3-section w3-green w3-ripple w3-padding">Send</button>
 
-</form>
+                              if ($Nombre == "" && $Apellido=="" && $Telefono=="" && $Mensaje=="") {
+                                  echo '<script type="text/javascript">
+                                  alert("Debe rellenar todos los campos!. ");
+                                  document.form1.Nombre.focus();
+                                  </script>';
+                              } else {
+                                  //INSERT INTO `curso`.`tblusuarios` (`idUsuario`, `Nombre`, `Apellido`, `login`, `password`, `pregunta`, `respuesta`) VALUES (NULL, 'juan', 'banegas', 'jbanegas', MD5('jbanegas'), '1', '1');
+                                  $SqlI = mysqli_query($link,"Insert into contactanos(`nombre`, `apellido`, `email`, `telefono`, `mensaje`)"
+                                          . " values('" . $Nombre . "','" . $Apellido . "','" . $Email . "','" . $Telefono . "','" . $Mensaje . "')")
+                                          or die("sadasdasdas " . mysqli_errno() . " - " . mysqli_error());
+                              }
+                          }
+                          ?>
 
 </body>
 </html>
