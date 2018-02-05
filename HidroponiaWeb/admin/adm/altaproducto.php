@@ -1,5 +1,5 @@
 <?php
-	include ("../conexion.php");
+	include ("../../config/conf.php");
 	$link=Conectarse();
 	if(!isset($_POST['nombre']) &&  !isset($_POST['descripcion']) && !isset($_POST['precio'])){
 		header("Location: agregarproducto.php");

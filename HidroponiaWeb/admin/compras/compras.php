@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../conexion.php";
+include ("../../config/conf.php");
 $link=Conectarse();
 		$arreglo=$_SESSION['carrito'];
 		$numeroventa=0;

@@ -56,7 +56,7 @@ section{
 .producto{
 	width: 20%;
 	height: auto;
-	
+
 	display: inline-block;
 	vertical-align: top;
 	margin-left: 1%;
@@ -159,7 +159,7 @@ li a {
   border-radius   : 5px;
   position        : relative;
   top   : 0;
-  color : #FFF;			
+  color : #FFF;
   transition : all .4s;
 }
 
@@ -201,7 +201,7 @@ li:hover a:after {
 
 .menu2 li {
   border-right  : 1px solid rgba(200,200,255,0.5);
-  border-left   : 1px solid rgba(40,40,40,0.2); 
+  border-left   : 1px solid rgba(40,40,40,0.2);
 }
 
 .selected {
@@ -224,7 +224,7 @@ a.fun {
 #formulario{
 	width: 50%;
 	height: auto;
-	
+
 	margin:0 auto;
 }
 input{

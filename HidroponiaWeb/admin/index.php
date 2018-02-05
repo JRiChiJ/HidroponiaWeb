@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../assets/img/ico.png">
-		<link rel="stylesheet" type="text/css" href="./css/estilos.css">
+		<link rel="stylesheet" type="text/css" href="./css/productoventas.css">
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 		<script type="text/javascript"  href="./js/scripts.js"></script>
 
@@ -20,12 +20,34 @@
   </head>
 
   <body>
-		<header>
-				<img src="./imagenes/hidrologo.jpg" id="logo">
-				<a href="./carritodecompras.php" title="ver carrito de compras">
-					<img src="./imagenes/carrito.png">
-				</a>
-			</header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Hydro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="dashboard.php">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="camasventa.php">Camas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactanos.php">Contactanos</a>
+            </li>
+          </ul>
+          <p>
+         <a href="./carritodecompras.php" class="btn btn-info btn-lg">
+           <span class="glyphicon glyphicon-piggy-bank"></span> Carrito
+         </a>
+       </p>
+        </div>
+      </nav>
 		<section>
 
 
@@ -38,9 +60,9 @@
 		?>
 			<div class="producto">
 			<center>
-				<img src="./productos/<?php echo $f['imagen'];?>"><br>
+        <img class="rounded-circle" src="./productos/<?php echo $f['imagen'];?>" alt="Generic placeholder image" width="140" height="140">
 				<span><?php echo $f['nombre'];?></span><br>
-				<a href="./detalles.php?id=<?php  echo $f['id'];?>">ver</a>
+        <p><a class="btn btn-success" href="./detalles.php?id=<?php  echo $f['id'];?>" role="button">View &raquo;</a></p>
 			</center>
 		</div>
 	<?php

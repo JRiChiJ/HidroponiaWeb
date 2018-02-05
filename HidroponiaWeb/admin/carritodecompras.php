@@ -111,7 +111,28 @@
 			}
 			echo '<center><h2 id="total">Total: '.$total.'</h2></center>';
 			if($total!=0){
-					echo '<center><a href="./compras/compras.php" class="aceptar">Comprar</a></center>';
+					//echo '<center><a href="./compras/compras.php" class="aceptar">Comprar</a></center>';
+			?>
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="formulario">
+					<input type="hidden" name="cmd" value="_cart">
+					<input type="hidden" name="upload" value="1">
+					<input type="hidden" name="business" value="jose_ricardo_cuellar@hotmail.com">
+					<input type="hidden" name="currency_code" value="USD">
+
+					<?php
+						for($i=0;$i<count($datos);$i++){
+					?>
+						<input type="hidden" name="item_name_<?php echo $i+1;?>" value="<?php echo $datos[$i]['Nombre'];?>">
+						<input type="hidden" name="amount_<?php echo $i+1;?>" value="<?php echo $datos[$i]['Precio'];?>">
+						<input	type="hidden" name="quantity_<?php echo $i+1;?>" value="<?php echo $datos[$i]['Cantidad'];?>">
+					<?php
+						}
+					?>
+
+
+					<center><input type="submit" value="comprar" class="aceptar" style="width:200px"></center>
+			</form>
+			<?php
 			}
 
 		?>
