@@ -20,7 +20,7 @@
 						$nombre="";
 						$precio=0;
 						$imagen="";
-						$re=mysqli_query($link,"select * from productos where id=".$_GET['id']);
+						$re=mysqli_query($link,"select * from Producto where id=".$_GET['id']);
 						while ($f=mysqli_fetch_array($re)) {
 							$nombre=$f['nombre'];
 							$precio=$f['precio'];
@@ -46,7 +46,7 @@
 			$nombre="";
 			$precio=0;
 			$imagen="";
-			$re=mysqli_query($link,"select * from productos where id=".$_GET['id']);
+			$re=mysqli_query($link,"select * from Producto where id=".$_GET['id']);
 			while ($f=mysqli_fetch_array($re)) {
 				$nombre=$f['nombre'];
 				$precio=$f['precio'];
@@ -91,14 +91,14 @@
 					<center>
 						<img src="./productos/<?php echo $datos[$i]['Imagen'];?>"><br>
 						<span ><?php echo $datos[$i]['Nombre'];?></span><br>
-						<span>Precio: <?php echo $datos[$i]['Precio'];?></span><br>
+						<span>Precio: <?php echo $datos[$i]['Precio'];?>$</span><br>
 						<span>Cantidad:
 							<input type="text" value="<?php echo $datos[$i]['Cantidad'];?>"
 							data-precio="<?php echo $datos[$i]['Precio'];?>"
 							data-id="<?php echo $datos[$i]['Id'];?>"
 							class="cantidad">
 						</span><br>
-						<span class="subtotal">Subtotal:<?php echo $datos[$i]['Cantidad']*$datos[$i]['Precio'];?></span><br>
+						<span class="subtotal">Subtotal:<?php echo $datos[$i]['Cantidad']*$datos[$i]['Precio'];?>$</span><br>
 						<a href="#" class="eliminar" data-id="<?php echo $datos[$i]['Id']?>">Eliminar</a>
 					</center>
 				</div>
@@ -109,7 +109,7 @@
 			}else{
 				echo '<center><h2>No has añadido ningun producto</h2></center>';
 			}
-			echo '<center><h2 id="total">Total: '.$total.'</h2></center>';
+			echo '<center><h2 id="total">Total: '.$total.'$</h2></center>';
 			if($total!=0){
 					//echo '<center><a href="./compras/compras.php" class="aceptar">Comprar</a></center>';
 			?>

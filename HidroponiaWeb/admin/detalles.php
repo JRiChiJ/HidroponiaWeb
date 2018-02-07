@@ -18,7 +18,7 @@
 	<?php
 		include ("../config/conf.php");
 	  $link=Conectarse();
-		$re=mysqli_query($link,"select * from productos where id=".$_GET['id'])or die(mysql_error());
+		$re=mysqli_query($link,"select * from Producto where id=".$_GET['id'])or die(mysql_error());
 		while ($f=mysqli_fetch_array($re)) {
 		?>
 

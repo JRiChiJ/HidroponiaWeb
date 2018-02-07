@@ -11,6 +11,7 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
 	<script type="text/javascript" src="./js/jquery-1.10.2.js"></script>
 	<script type="text/javascript"  src="./js/scripts.js"></script>
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 	<header>
@@ -44,14 +45,27 @@ session_start();
 			Imagen<br>
 			<input type="file" name="file">
 		</fieldset>
-		<fieldset>
-			Precio<br>
+			<fieldset>
+				Precio<br>
 			<input type="text" name="precio">
 		</fieldset>
-		<input type="submit" name="accion" value="Enviar" class="aceptar">
-	</form>
+		<fieldset>
+			Tipo<br>
+		<div class="btn-group" data-toggle="buttons">
+<label class="btn btn-primary active">
+<input type="radio" name="option1" id="option1" autocomplete="off" value="1" > Semilla
+</label>
+<label class="btn btn-primary">
+<input type="radio" name="option2" id="option2" autocomplete="off" value="2"> Solucion
+</label>
+</div>
+</fieldset>
 
-		</form>
+
+		<input type="submit" name="accion" value="Enviar" class="aceptar">
+
+
+	</form>
 	</section>
 </body>
 </html>

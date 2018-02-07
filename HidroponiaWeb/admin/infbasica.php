@@ -30,16 +30,15 @@
                 <a class="nav-link" href="dashboard.php">Home<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Productos</a>
+                <a class="nav-link" href="index.php">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="camasventa.php">Camas</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contactanos.php">Contactanos</a>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
           </div>
         </nav>
     </header>
@@ -107,7 +106,50 @@
             <img class="rounded-circle" src="../assets/img/hidroplanta.jpg" alt="Generic placeholder image" width="140" height="140">
             <h2>Nutrientes para hidroponia</h2>
             <p>Esta es la primera entrada de una serie de Guías Básicas sobre diversos temas que conviene entender cuando hablamos de hidroponía. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal0">
+              Informacion
+            </button>
+                <!-- Modal -->
+              <div class="modal fade" id="exampleModal0" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Nutrientes</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Las plantas, como nosotros, necesita <strong>alimentarse</strong>. Pero a diferencia de nosotros, ellas se fabrican su propia comida, son autótrofas. Como cualquier fábrica, necesita materias primas y energía. La energía es bien sabido que la obtiene de la <strong>luz del sol</strong>. Las materias primas (es decir, los elementos) las obtiene de <strong>distintas fuentes</strong>:</p>
+                      <h3></h3>
+                      <h3>Del aire:</h3>
+                      <ul>
+                        <li><strong>Carbono:</strong> Es el esqueleto de la mayoría de moléculas en las plantas y los seres vivos. Las plantas lo obtienen del CO2.</li>
+                        <li><strong>Oxígeno.</strong></li>
+                      </ul>
+                      <h3>Del agua:</h3>
+                      <ul>
+                        <li><strong>Hidrógeno.</strong></li>
+                      </ul>
+                      <h3>De sales a través de las raíces:</h3>
+                      <ul>
+                        <li><span style="text-decoration: underline;"><strong>Nitrógeno (N):</strong></span> Forma parte de muchas moléculas que necesitan las plantas, especialmente las proteínas.</li>
+                        <li><span style="text-decoration: underline;"><strong>Fósforo (P).</strong></span></li>
+                        <li><span style="text-decoration: underline;"><strong>Potasio (K).</strong></span></li>
+                        <li><b>Micronutrientes:</b> Calcio, azufre, hierro, magnesio, boro, manganeso, zinc, molibdeno, cobre, cobalto, cloro&#8230;</li>
+                      </ul>
+                        <p>En hidroponía nos tenemos que preocupar del último grupo, de<strong> las sales</strong> en nuestro líquido hidropónico (o solución hidropónica). Los tres primeros, subrayados,  son demandados en cantidades muy grandes por las plantas, forman parte de los <strong>macronutrientes</strong>. Los micronutrientes, por el contrario, se necesitan en cantidades <strong>muy pequeñas</strong>, pero siguen siendo igual de necesarios.</p>
+                        <p>Como habrás comprobado, hay literalmente <strong>cientos de botes</strong> de nutrientes distintos, de mil formas y colores, aunque todos deben tener estos nutrientes e informar en qué cantidad. Generalmente nos referimos a los tres primeros con las <strong>siglas NPK</strong>, de sus elementos. En las etiquetas de nutrientes pone <strong>cuánto hay de cada uno</strong>, en forma de <strong>3 números seguidos</strong>, que indican qué <strong>porcentaje</strong> de cada nutriente tiene. Por ejemplo, una solución<strong> 5-5-5</strong> tiene un 5% de nitrógeno, un 5% de fósforo y un 5% de potasio, para un total de un 15%. El resto es agua, micronutrientes u otras moléculas interesantes o de relleno.</p>
+                        <p>Tenemos que preocuparnos mirando las etiquetas que nuestras plantas tengan de todo en la cantidad que ellas necesiten. Las<strong> necesidades varían</strong> en función de la especie, el estado de crecimiento e incluso las estaciones. Teniendo esto en cuenta, vuelve a mirar la etiqueta de FloraMato más arriba, ¿ves los números?</p>
+                        <p>1-2-5. Lo que significa que estaba<strong> privando a mis tomates de su nitrógeno</strong>, elemento que devoran para poder crecer. Y no sólo eso. Debido entre otras cosas a que las necesidades de las plantas cambian, los nutrientes se venden separados en distintos botes para que los combines en función de las mismas. En FloraMato no vienen micronutrientes, con lo cual el hecho de que sobrevivieran un mes tiene mérito.</p>
+                        <p>Utilizo FloraMato como <strong>ejemplo</strong> ya que es un error que cometí del que espero que aprendáis lo que aprendí yo, pero sin gastar dinero. No puedo decir si el producto es bueno o no ya que no lo he usado en las condiciones en las que debe usarse.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img class="rounded-circle" src="../assets/img/agua.jpg" alt="Generic placeholder image" width="140" height="140">

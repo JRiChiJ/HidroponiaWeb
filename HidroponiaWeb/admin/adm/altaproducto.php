@@ -29,11 +29,22 @@
 		      		move_uploaded_file($_FILES["file"]["tmp_name"],
 		      		"../productos/" .$random.'_'.$_FILES["file"]["name"]);
 		      		echo "Archivo guardado en " . "../productos/" .$random.'_'. $_FILES["file"]["name"];
-		      		$producto=$_POST['nombre'];
+
+		      $producto=$_POST['nombre'];
 					$descripcion=$_POST['descripcion'];
 					$precio=$_POST['precio'];
-					$Sql="insert into productos (nombre,descripcion,imagen,precio) values(
+
+
+					if(isset($_POST['option1'])){
+						$IdTipo=$_POST['option1'];
+					}
+					if(isset($_POST['option2'])){
+						$IdTipo=$_POST['option2'];
+
+					}
+					$Sql="insert into Producto (nombre,IdTipo,descripcion,imagen,precio) values(
 							'".$producto."',
+							'".$IdTipo."',
 							'".$descripcion."',
 							'".$imagen."',
 							'".$precio."')";

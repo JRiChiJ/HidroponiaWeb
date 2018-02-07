@@ -55,13 +55,15 @@
 	<?php
 		include ("../config/conf.php");
 	  $link = Conectarse();
-		$re=mysqli_query($link,"select * from productos")or die(mysqli_error());
+		$re=mysqli_query($link,"select * from Producto,tipo WHERE tipo.id_tipo = Producto.IdTipo")or die(mysqli_error());
 		while ($f=mysqli_fetch_array($re)) {
 		?>
 			<div class="producto">
 			<center>
         <img class="rounded-circle" src="./productos/<?php echo $f['imagen'];?>" alt="Generic placeholder image" width="140" height="140">
 				<span><?php echo $f['nombre'];?></span><br>
+        <span><?php echo $f['id_tipo'];?></span><br>
+        <span><?php echo $f['tipo'];?></span><br>
         <p><a class="btn btn-success" href="./detalles.php?id=<?php  echo $f['id'];?>" role="button">View &raquo;</a></p>
 			</center>
 		</div>

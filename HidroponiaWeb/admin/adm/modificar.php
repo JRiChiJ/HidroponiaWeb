@@ -40,17 +40,17 @@
 				<td>Modificar</td>
 			</tr>
 		<?php
-			$resultado=mysqli_query($link,"select * from productos");
+			$resultado=mysqli_query($link,"select * from Producto");
 			while($row=mysqli_fetch_array($resultado)){
 				echo '
 				<tr>
 					<td>
 						<input type="hidden" value="'.$row[0].'">'.$row[0].'
-						<input type="hidden" class="imagen" value="'.$row[3].'">
+						<input type="hidden" class="imagen" value="'.$row[4].'">
 					</td>
 					<td><input type="text" class="nombre" value="'.$row[1].'"></td>
-					<td><input type="text" class="descripcion" value="'.$row[2].'"></td>
-					<td><input type="text" class="precio" value="'.$row[4].'"></td>
+					<td><input type="text" class="descripcion" value="'.$row[3].'"></td>
+					<td><input type="text" class="precio" value="'.$row[5].'"></td>
 					<td><button class="eliminar" data-id="'.$row[0].'">Eliminar</button></td>
 					<td><button class="modificar" data-id="'.$row[0].'">Modificar</button></td>
 				</tr>
